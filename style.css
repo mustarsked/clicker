@@ -1,0 +1,46 @@
+body{
+    background-image: url(img/Без\ названия.jfif);
+    font-family: 'Montserrat';
+    background-size: 25%;
+}
+.container{
+    width: 500px;
+    height: 650px;
+    background-color: black;
+    color: white;
+    margin: auto;
+    background: linear-gradient(180deg, rgb(197, 173, 222 ), rgb(90, 39, 145));
+box-shadow: 10px 20px 50px rgb(136, 63, 209);
+overflow: hidden;
+}
+h3{
+    font-size: 26px;
+    margin-top: 10px;
+    text-align: center;
+}
+#spanCount{
+    text-align: center;
+    margin-left: 195px;
+    font-size: 20px;
+    font-weight: 700;
+}
+#tapArea{
+    margin-left: 15px;
+    overflow: hidden;
+    position: relative;
+}
+.spanTest{
+    position: absolute;
+    bottom: -8%;
+    animation: test 2s linear alternate;
+    
+    text-align: center;
+}
+@keyframes test{
+    0%{
+        bottom:-8%;
+    }
+    100%{
+        bottom: 100%;
+    }
+}

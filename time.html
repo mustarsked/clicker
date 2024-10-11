@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="time.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+<audio autoplay="autoplay" src="media/Yeat - Already Rich--online-audio-convert.com.mpeg"></audio>
+</head>
+
+<body>
+
+    <div class="container">
+        <h3>T2P2LK2</h3>
+        <span id="spanCount">Счёт: 0/1000000 </span>
+        <div id="tapArea"><img src="img/level--1.png" alt=""></div>
+    </div>
+    <p id="countdown">10</p>
+</body>
+<script>
+    let time = 10; // Задаём начальное время
+    const timer = setInterval(() => {
+        document.getElementById('countdown').textContent = time <= 0
+            ? clearInterval(timer) // Останавливаем таймер, поскольку время истекло
+            : time--; // С каждой секундой уменьшаем время
+    }, 1000);
+
+    var spanCount = document.getElementById('spanCount');
+    var count = 0;
+
+    tapArea.addEventListener('click', function () {
+        count += 6000;
+        spanCount.textContent = 'Счёт: ' + count + '/ 1000000';
+        var spanAnimated = document.createElement('span');
+        spanAnimated.innerHTML = '+?';
+        tapArea.append(spanAnimated);
+        spanAnimated.className = 'spanTest';
+        if (count >= 1000000) {
+            clearInterval(timer)// Останавливаем таймер
+            alert("ты одолел меня.."); // Показываем сообщение
+        }
+    })
+
+
+</script>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h3>Тапалка</h3>
+        <span id="spanCount">Счёт: 0/10 </span>
+        <div id="tapArea"></div>
+    </div>
+</body>
+<script>
+    var spanCount = document.getElementById('spanCount');
+    var count = 0;
+
+    var tapArea = document.getElementById('tapArea');
+    var img = document.createElement('img');
+    img.src = 'img/level-1.webp';
+    tapArea.style.display = 'flex'
+    tapArea.style.justifyContent = 'center'
+    tapArea.append(img);
+
+    tapArea.addEventListener('click', function () {
+        count++;
+        spanCount.textContent = 'Счёт: ' + count + '/ 10';
+        var spanAnimated = document.createElement('span');
+        spanAnimated.innerHTML = '+1';
+        tapArea.append(spanAnimated);
+        spanAnimated.className = 'spanTest';
+
+
+        if (count >= 10) {
+            count = count + 1;
+            spanCount.textContent = 'Счёт: ' + count + '/ 30';
+            spanCount.style.color = '#FDE58E';
+
+            tapArea.firstElementChild.src = 'img/level-2.webp';
+            spanAnimated.innerHTML = '+2';
+        }
+        if (count >= 30) {
+            count = count + 2.5;
+            spanCount.textContent = 'Счёт: ' + count + '/ 100';
+            spanCount.style.color = '#FDE58E';
+
+            tapArea.firstElementChild.src = 'img/level-3.webp';
+            spanAnimated.innerHTML = '+4.5';
+        }
+        if (count >= 100) {
+            count = count + 2.5;
+            spanCount.textContent = 'Счёт: ' + count + '/ 250';
+            spanCount.style.color = '#FDE58E';
+
+            tapArea.firstElementChild.src = 'img/level-4.webp';
+            spanAnimated.innerHTML = '+7';
+        }
+        if (count >= 250) {
+            count = count + 5;
+            spanCount.textContent = 'Счёт: ' + count + '/ 1000';
+            spanCount.style.color = '#FDE58E';
+
+            tapArea.firstElementChild.src = 'img/level-4.webp';
+            tapArea.firstElementChild.style.filter = 'invert(1)'
+            spanAnimated.innerHTML = '+12';
+        }
+        if (count >= 1000) {
+            count = count + 15;
+            spanCount.textContent = 'Счёт: ' + count + '/ 2500';
+            spanCount.style.color = '#FDE58E';
+
+            tapArea.firstElementChild.src = 'img/level-3.webp';
+            tapArea.firstElementChild.style.filter = 'invert(1)'
+            spanAnimated.innerHTML = '+27';
+        }
+        if (count >= 2500) {
+            count = count + 30;
+            spanCount.textContent = 'Счёт: ' + count + '/ 7500';
+            spanCount.style.color = '#FDE58E';
+
+            tapArea.firstElementChild.src = 'img/level-2.webp';
+            tapArea.firstElementChild.style.filter = 'invert(1)'
+            spanAnimated.innerHTML = '+57';
+        }
+        if (count >= 7500) {
+            count = count + 100;
+            spanCount.textContent = 'Счёт: ' + count + '/ 20000';
+            spanCount.style.color = '#FDE58E';
+
+            tapArea.firstElementChild.src = 'img/level-1.webp';
+            tapArea.firstElementChild.style.filter = 'invert(1)'
+            spanAnimated.innerHTML = '+157';
+        }
+        if (count >= 20000) {
+            onclick = window.location.href = 'file:///E:/%D0%BD%D0%B5%D0%B2%D0%B5%D0%BB%D0%B8%D0%BA%D0%B0%20%D0%BF%D0%B5%D1%80%D0%B5%D1%80%D0%BE%D0%B1%D0%BA%D0%B0%20%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%BD%D0%BE%D1%97/r-u-ready.html'
+        }
+
+    });
+
+
+</script>
+
+</html>

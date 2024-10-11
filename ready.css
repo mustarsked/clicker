@@ -1,0 +1,26 @@
+body{
+    font-family: 'Montserrat';
+ background-color: black;
+   text-align: center;
+   color: white;
+}
+.button{
+    display: inline;
+}
+.yes{
+    background-color: green;
+    width: 250px;
+    height: 90px;
+    font-size: 20px;
+    border: 1px solid black;
+    margin: auto;
+}
+.no{
+    background-color: red;
+    width: 250px;
+    height: 90px;
+    font-size: 20px;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 5px;
+}
